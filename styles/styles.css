@@ -1,0 +1,56 @@
+header {
+    background-color: #DEDEDE80;
+    width: 1920px;
+    height: 147px;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.menu li {
+    display: inline-block;
+}
+
+.logo {
+    width: 202px;
+    height: 147px;
+}
+.input {
+    border: 1px solid black;
+}
+.ph1 {
+    width:826px;
+    height:550px
+}
+.ph2 {
+    width:393px;
+    height:481px
+}
+
+
+.RectangCont {
+    display: inline-block;
+    position: relative;
+}
+
+.ph3 {
+    width:821.41px;
+    height:342.33px;
+    display: block;
+}
+.rectangle {
+    width: 867px;
+    height: 231px;
+    background-color:#BC3324;
+    top: 50%;
+    transform: translate(50%);
+}
+.phEvent img {
+    height: 434px;
+    width: 393px;
+}
