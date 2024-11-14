@@ -50,7 +50,113 @@ header {
     top: 50%;
     transform: translate(50%);
 }
-.phEvent img {
-    height: 434px;
-    width: 393px;
+
+/* мероприятий блок */
+/*1 карточки с мероприятиями */
+.event {
+    text-align: center;
 }
+.cardE1 {
+    border: 1px solid black;
+    width: 405px;
+    height: 638px;
+    text-align: left;
+}
+.CardE1-img {
+    width: 100%;
+    height: 434px;
+    background-image: url(../Nirvana.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.cardE1 a:link {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+}
+.cardE1 a:visited {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.cardE1 a:hover {
+    color: #A51505;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+/* 2 карточка для мероприятий */
+.cardE2 {
+    border: 1px solid black;
+    width: 405px;
+    height: 638px;
+    text-align: left;
+}
+.CardE2-img {
+    width: 100%;
+    height: 434px;
+    background-image: url(../HowStuffWorks.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.cardE2 a:link {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+}
+.cardE2 a:visited {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.cardE2 a:hover {
+    color: #A51505;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+/*3 карточка для мероприятий*/
+.cardE3 {
+    border: 1px solid black;
+    width: 405px;
+    height: 638px;
+    text-align: left;
+}
+.CardE3-img {
+    width: 100%;
+    height: 434px;
+    background-image: url(../Sade.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.cardE3 a:link {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+}
+.cardE3 a:visited {
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.cardE3 a:hover {
+    color: #A51505;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+
+.blog {
+    width: 604px;
+    height: 62px;
+    background-color: #1F1E1E;
+    text-align: center;
+    display: inline-block;
+}
+.blogPage {
+    text-align: center;
+}
+
