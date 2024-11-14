@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Главная страница</title>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="logo.png" alt="Логотип для шапки">
-            <nav class="menu">
-                <ul> <!--Сылки сделать-->
-                    <li>Мероприятия</li>
-                    <li>Блог</li>
-                    <li>О нас</li>
-                    <li>Контакты</li>
-                    <li class="input">Войти</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="quote">
-                <h1>Арт-пространство</h1>
-                <img class="lenni" src="lenni.png" alt="лого lenni">
-                <h1>для людей, горящих сердцем и делом <br> место для настоящего</h1>
-            </div>
-            <div class="buttons1">
-                <h2>я хочу:</h2>
-                <span><button><a href="#">Провести мероприятие</a></button><button><a href="#">Провести мероприятие</a></button></span>
-            </div>
-            <div>
-                <h1>О нас</h1>
-            </div>
-
-         <div>
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="Логотип для шапки">
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li class="input"><a href="#">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quote">
+            <h1>Арт-пространство</h1>
+            <img class="lenni" src="lenni.png" alt="Лого Lenni">
+            <h1>для людей, горящих сердцем и делом <br> место для настоящего</h1>
+        </div>
+        <div class="buttons1">
+            <h2>Я хочу:</h2>
+            <span>
+                <button><a href="#">Провести мероприятие</a></button>
+                <button><a href="#">Принять участие</a></button>
+            </span>
+        </div>
+        <div>
+            <h1>О нас</h1>
+        </div>
+        <div>
             <h1>Проект «Millennials»</h1>
-            <p>Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и<br> желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас<br> возможность помочь им воплотить их мечту в реальность.</p>
-            
-            
+            <p>Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность.</p>
             <div class="photoProj">
-                <img class="ph1" src="1_image.jpg" alt="1 img" />
-                <img class="ph2" src="2_image.jpg" alt="2 img"  />
+                <img class="ph1" src="1_image.jpg" alt="Первая фотография">
+                <img class="ph2" src="2_image.jpg" alt="Вторая фотография">
             </div>
-                
-            <h1>Мы предоставляем площади для вашего мероприятия </h1>
-            <p>И оказываем помощь с организацией, если вам это нужно.<br> Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым<br> ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.</p>
-            <!-- Работа с прямоугольником и фото + шапку-->
-            <div class="RectangCont">    
-                <img class="ph3" src="3_pic.png" alt="3 img"/>
+            <h1>Мы предоставляем площади для вашего мероприятия</h1>
+            <p>И оказываем помощь с организацией, если вам это нужно. Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.</p>
+            <div class="RectangCont">
+                <img class="ph3" src="3_pic.png" alt="Третья фотография">
                 <div class="rectangle"></div>
             </div>
-            
-            <p>Мы уже успешно организовали и <br> провели более 100 проектов.<br> Посмотрите, как это было классно.</p>
-            <!-- Сделать кнопку "Смотреть"-->
+            <p>Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
+            <button>Смотреть</button>
         </div>
-
         <div class="event">
             <h1>Мероприятия</h1>
-<!-- Карточки с мероприятиями-->
-            <div class="cardsEvents">
-                <div class="cardE1">
-                    <div class="CardE1-img"></div>
-                    <div class="cardContentE1-title"><h2><a href="#">Собираемся и слушаем альбом Nirvana. Nirvana</a></h2></div>
-                    <p class="cardContentE1-p">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img" style="background-image: url('Nirvana.png');"></div>
+                    <div class="card-title">
+                        <h2><a href="#">Собираемся и слушаем альбом Nirvana</a></h2>
+                    </div>
+                    <p class="card-description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
                 </div>
-
-                <div class="cardE2">
-                    <div class="CardE2-img"></div>
-                    <div class="cardContentE2-title"><h2><a href="#">Есть тема, нужно обсудить с HowStuffWorks</a></h2></div>
-                    <p class="cardContentE2-p">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+            
+                <div class="card">
+                    <div class="card-img" style="background-image: url('HowStuffWorks.png');"></div>
+                    <div class="card-title">
+                        <h2><a href="#">Есть тема, нужно обсудить с HowStuffWorks</a></h2>
+                    </div>
+                    <p class="card-description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
                 </div>
-
-                <div class="cardE3">
-                    <div class="CardE3-img"></div>
-                    <div class="cardContentE3-title"><h2><a href="#">Вечер | The Best of Sade</a></h2></div>
-                    <p class="cardContentE3-p">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза,
-                        ритм-блюза и фанка.</p>
+            
+                <div class="card">
+                    <div class="card-img" style="background-image: url('Sade.png');"></div>
+                    <div class="card-title">
+                        <h2><a href="#">Вечер | The Best of Sade</a></h2>
+                    </div>
+                    <p class="card-description">Музыка группы имеет эклектичный характер, сочетая в себе элементы соул, джаза, ритм-блюза и фанка.</p>
                 </div>
-
-                <!--установить для каждого время (доделать)-->
             </div>
             
         </div>
-
-            <div class="blogPage">
-                <div class="blog"><h1 style="color: #FFFFFF; font-family: Lora;">Блог</h1></div>
+        <div class="blogPage">
+            <div class="blog">
+                <h1 style="color: #FFFFFF; font-family: Lora;">Блог</h1>
             </div>
-
-
-        </main>
-
-
-        
-    
-        
-<!--Шаблоны всех карточек-->
-        <div class="cardsEvent">
-
+            <div class="cNews"></div>
         </div>
-    </body>
+    </main>
+</body>
 </html>

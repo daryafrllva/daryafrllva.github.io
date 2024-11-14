@@ -1,17 +1,21 @@
+/* Стили для header */
 header {
     background-color: #DEDEDE80;
-    width: 1920px;
+    width: 100%;
     height: 147px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex;
+    gap: 20px;
 }
+
 .menu li {
     display: inline-block;
 }
@@ -20,18 +24,42 @@ header {
     width: 202px;
     height: 147px;
 }
-.input {
+
+.input a {
     border: 1px solid black;
-}
-.ph1 {
-    width:826px;
-    height:550px
-}
-.ph2 {
-    width:393px;
-    height:481px
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
 }
 
+/* Основные стили для элементов страницы */
+.quote {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.buttons1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons1 button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.photoProj {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.ph1, .ph2 {
+    width: 393px;
+    height: 481px;
+}
 
 .RectangCont {
     display: inline-block;
@@ -39,124 +67,81 @@ header {
 }
 
 .ph3 {
-    width:821.41px;
-    height:342.33px;
+    width: 821.41px;
+    height: 342.33px;
     display: block;
+    margin: 20px auto;
 }
+
 .rectangle {
     width: 867px;
     height: 231px;
-    background-color:#BC3324;
+    background-color: #BC3324;
+    position: absolute;
     top: 50%;
-    transform: translate(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* мероприятий блок */
-/*1 карточки с мероприятиями */
+/* Стили для карточек мероприятий */
 .event {
     text-align: center;
+    margin: 40px 0;
 }
-.cardE1 {
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
     border: 1px solid black;
     width: 405px;
     height: 638px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
-.CardE1-img {
+
+.card-img {
     width: 100%;
     height: 434px;
-    background-image: url(../Nirvana.png);
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center;
 }
-.cardE1 a:link {
+
+.card-title {
+    padding: 10px;
+}
+
+.card-title a {
     color: #1F1E1E;
-    background-color: transparent;
     text-decoration: none;
 }
-.cardE1 a:visited {
-    color: #1F1E1E;
-    background-color: transparent;
-    text-decoration: none;
-  }
-.cardE1 a:hover {
+
+.card-title a:hover {
     color: #A51505;
-    background-color: transparent;
     text-decoration: underline;
-  }
+}
 
-/* 2 карточка для мероприятий */
-.cardE2 {
-    border: 1px solid black;
-    width: 405px;
-    height: 638px;
-    text-align: left;
+.card-description {
+    padding: 10px;
+    font-size: 14px;
 }
-.CardE2-img {
-    width: 100%;
-    height: 434px;
-    background-image: url(../HowStuffWorks.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-.cardE2 a:link {
-    color: #1F1E1E;
-    background-color: transparent;
-    text-decoration: none;
-}
-.cardE2 a:visited {
-    color: #1F1E1E;
-    background-color: transparent;
-    text-decoration: none;
-  }
-.cardE2 a:hover {
-    color: #A51505;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-/*3 карточка для мероприятий*/
-.cardE3 {
-    border: 1px solid black;
-    width: 405px;
-    height: 638px;
-    text-align: left;
-}
-.CardE3-img {
-    width: 100%;
-    height: 434px;
-    background-image: url(../Sade.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-.cardE3 a:link {
-    color: #1F1E1E;
-    background-color: transparent;
-    text-decoration: none;
-}
-.cardE3 a:visited {
-    color: #1F1E1E;
-    background-color: transparent;
-    text-decoration: none;
-  }
-.cardE3 a:hover {
-    color: #A51505;
-    background-color: transparent;
-    text-decoration: underline;
-  }
 
-
-
+/* Стили для блока блога */
 .blog {
     width: 604px;
     height: 62px;
     background-color: #1F1E1E;
+    color: #FFFFFF;
     text-align: center;
-    display: inline-block;
+    line-height: 62px;
+    margin: 0 auto 20px;
 }
+
 .blogPage {
     text-align: center;
 }
-
