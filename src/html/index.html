@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "ru" >
+   @@include('blocks/head.html')
+   <body class = "body">
+      @@include('blocks/page-header.html')
+      <main class = "main">
+         <div class = "center-block">       
+               <p class = "center-block__element-1">АРТ-ПРОСТРАНСТВО</p>
+               <picture class="center-block__logo">
+                  <img src="assets/images/central_logo.svg" alt="logo" class="center-block__img">
+                </picture>
+               <p class = "center-block__element-2">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ <br/> 
+                  МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
+         </div>
+         <section class = "section">
+            <p class = "section__center">Я ХОЧУ:</p>
+            <div class = "section__bottom">
+               <p class = "btn section__value-1">Провести мероприятие</p>
+               <p class = "btn section__value-2">Стать арендатором</p>
+            </div>   
+         </section>
+         <h1 class="center-block__title section-title">О НАС</h1>
+         @@include('blocks/aboutus.html')
+         <h2 class="listing__title section-title">Мероприятия</h2>
+         <div class="listing__events-list--index">
+            <!-- prettier-ignore -->
+            @@loop('blocks/event-card.html', [
+              {
+                "class": "listing__event-card",
+                "img": "assets/images/events/nirvana.jpg",
+                "alt": "nirvana",
+                "title": "Собираемся и слушаем альбом Nirvana",
+                "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                "time": "07.12.2022 | начало 18.00",
+                "datetime": "2022-12-07T18:00"
+              },
+              {
+                "class": "listing__event-card",
+                "img": "assets/images/events/stuff.jpg",
+                "alt": "stuff",
+                "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                "time": "14.12.2022 | начало 18.30",
+                "datetime": "2022-12-14T18:30"
+              },
+              {
+                 "class": "listing__event-card",
+                 "img": "assets/images/events/sade.jpg",
+                 "alt": "sade",
+                 "title": "Вечер | The Best of Sade",
+                 "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                 "time": "16.12.2022 | начало 20.00",
+                 "datetime": "2022-12-16T20:00"
+               },
+               {
+                  "class": "listing__event-card",
+                  "img": "assets/images/events/malevich.jpg",
+                  "alt": "malevich",
+                  "title": "Выставка Малевича в Томске",
+                  "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
+                  "time": "23.12.2022 | начало 20.00",
+                  "datetime": "2022-12-23T20:00"
+                },
+                {
+                   "class": "listing__event-card",
+                   "img": "assets/images/events/master.jpg",
+                   "alt": "master",
+                   "title": "Мастер — класс по студийной съемке от Tatler",
+                   "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+                   "time": "25.12.2022 | начало 13.00",
+                   "datetime": "2022-12-25T13:00"
+                 },
+                 {
+                    "class": "listing__event-card",
+                    "img": "assets/images/events/hatters.jpg",
+                    "alt": "hatters",
+                    "title": "Повесилимся на славу на концерте The Hatters",
+                    "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
+                    "time": "27.12.2022 | начало 10.00",
+                    "datetime": "2022-12-27T10:00"
+                  }
+
+            ])
+          </div>
+         @@include('blocks/contacts.html')
+         @@include(('blocks/doit.html'), {"class": "home__doit"})
+      </main>
+      
+      @@include('blocks/page-footer.html')
+      @@include('blocks/event-pp.html')
+      <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+      <script defer src="scripts/swiper.min.js"></script>
+      <script defer src="scripts/main.min.js"></script>
+   </body>
+</html>
