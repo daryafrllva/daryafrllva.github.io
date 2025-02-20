@@ -1,7 +1,9 @@
 import gulp from "gulp";
+
 import del from "del";
 import include from "gulp-file-include";
 import formatHtml from "gulp-format-html";
+
 import less from "gulp-less";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
@@ -9,14 +11,19 @@ import autoprefixer from "autoprefixer";
 import sortMediaQueries from "postcss-sort-media-queries";
 import minify from "gulp-csso";
 import rename from "gulp-rename";
+
 import terser from "gulp-terser";
+
 import imagemin from "gulp-imagemin";
 import imagemin_gifsicle from "imagemin-gifsicle";
 import imagemin_mozjpeg from "imagemin-mozjpeg";
 import imagemin_optipng from "imagemin-optipng";
+
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
+
 import server from "browser-sync";
+
 const resources = {
   html: "src/html/**/*.html",
   jsDev: "src/scripts/dev/**/*.js",
@@ -34,10 +41,13 @@ const resources = {
     "src/php/**/*.php"
   ]
 };
+
 // Gulp Tasks:
+
 function clean() {
   return del("dist");
 }
+
 function includeHtml() {
   return gulp
     .src("src/html/*.html")
@@ -51,6 +61,7 @@ function includeHtml() {
     .pipe(formatHtml())
     .pipe(gulp.dest("dist"));
 }
+
 function style() {
   return gulp
     .src("src/styles/styles.less")
@@ -69,6 +80,7 @@ function style() {
     .pipe(rename("styles.min.css"))
     .pipe(gulp.dest("dist/styles"));
 }
+
 function js() {
   return gulp
     .src("src/scripts/dev/*.js")
@@ -88,22 +100,26 @@ function js() {
     )
     .pipe(gulp.dest("dist/scripts"));
 }
+
 function jsCopy() {
   return gulp
     .src(resources.jsVendor)
     .pipe(plumber())
     .pipe(gulp.dest("dist/scripts"));
 }
+
 function copy() {
   return gulp
     .src(resources.static, {
-      base: "src"
+      base: "src",
+      encoding: false
     })
     .pipe(gulp.dest("dist/"));
 }
+
 function images() {
   return gulp
-    .src(resources.images)
+    .src(resources.images, { encoding: false })
     .pipe(
       imagemin([
         imagemin_gifsicle({ interlaced: true }),
@@ -113,6 +129,7 @@ function images() {
     )
     .pipe(gulp.dest("dist/assets/images"));
 }
+
 function svgSprite() {
   return gulp
     .src(resources.svgSprite)
@@ -131,6 +148,17 @@ function svgSprite() {
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("dist/assets/icons"));
 }
+
+function injectSvg() {
+  const svg = fs.readFileSync('dist/assets/icons/symbols.svg', 'utf8'); // Читаем SVG
+  return gulp
+    .src(resources.html) // Берем HTML файл
+    .pipe(inject.transform.htmlContent(function(contents) {
+      return contents.replace('<!-- inject:svg -->', svg); // Вставляем SVG
+    }))
+    .pipe(gulp.dest('dist')); // Сохраняем измененный HTML
+}
+
 const build = gulp.series(
   clean,
   copy,
@@ -141,10 +169,12 @@ const build = gulp.series(
   images,
   svgSprite
 );
+
 function reloadServer(done) {
   server.reload();
   done();
 }
+
 function serve() {
   server.init({
     server: "dist"
@@ -157,7 +187,9 @@ function serve() {
   gulp.watch(resources.images, { delay: 500 }, gulp.series(images, reloadServer));
   gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
 }
+
 const start = gulp.series(build, serve);
+
 export {
   clean,
   copy,
@@ -169,5 +201,6 @@ export {
   svgSprite,
   build,
   serve,
-  start
+  start,
+  injectSvg
 };
